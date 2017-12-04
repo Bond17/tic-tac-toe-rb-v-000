@@ -69,7 +69,11 @@ end
 
 def winner(board)
   if won?(board)
+<<<<<<< HEAD
     return board[won?(board)[0]]
+=======
+    return board[won?(board).first]
+>>>>>>> 67b63b3e5774f8c7741ccc3939548ff6a239fed7
   end
 end
 
@@ -132,6 +136,7 @@ end
 # Define your play method below
 def play(board)
 moves=0
+<<<<<<< HEAD
 until moves==8
   if won?(board) != false
     puts "Congratulations #{winner(board)}!"
@@ -140,12 +145,26 @@ until moves==8
   if draw?(board)
     puts "Cat's Game!"
     break
+=======
+until moves==9
+
+  turn(board)
+  moves+=1
+  if won?(board)
+    winner(board)
+  end
+  if draw?(board)
+    puts "Cat's Game!"
+>>>>>>> 67b63b3e5774f8c7741ccc3939548ff6a239fed7
   end
   if over?(board)
     break
   end
+<<<<<<< HEAD
   turn(board)
   moves+=1
+=======
+>>>>>>> 67b63b3e5774f8c7741ccc3939548ff6a239fed7
 end
 
 end
